@@ -1,0 +1,9 @@
+C:\Users\1\Documents\Visual Studio 2012\Projects\Asp.Net\Corova\Corova\bin\Debug\Corova.exe.config
+C:\Users\1\Documents\Visual Studio 2012\Projects\Asp.Net\Corova\Corova\bin\Debug\Corova.exe
+C:\Users\1\Documents\Visual Studio 2012\Projects\Asp.Net\Corova\Corova\bin\Debug\Corova.pdb
+C:\Users\1\Documents\Visual Studio 2012\Projects\Asp.Net\Corova\Corova\obj\Debug\Corova.csprojResolveAssemblyReference.cache
+C:\Users\1\Documents\Visual Studio 2012\Projects\Asp.Net\Corova\Corova\obj\Debug\Corova.Form1.resources
+C:\Users\1\Documents\Visual Studio 2012\Projects\Asp.Net\Corova\Corova\obj\Debug\Corova.Properties.Resources.resources
+C:\Users\1\Documents\Visual Studio 2012\Projects\Asp.Net\Corova\Corova\obj\Debug\Corova.csproj.GenerateResource.Cache
+C:\Users\1\Documents\Visual Studio 2012\Projects\Asp.Net\Corova\Corova\obj\Debug\Corova.exe
+C:\Users\1\Documents\Visual Studio 2012\Projects\Asp.Net\Corova\Corova\obj\Debug\Corova.pdb
