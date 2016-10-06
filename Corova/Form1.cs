@@ -64,13 +64,16 @@ namespace Corova
                 // вывести сообщение об ошибке
                 MessageBox.Show("Введите четырехзначное число");
             }
-            else
-            {
-                // иначе вызвать метод сравнения чисел
-                SravenieChisel();
-                // вызвать метод вывода результатов сравнения на экран
-                RezultShow();
-            }
+            else //иначе, если количество совпадений одинаковых цифр меньше 1
+                if (ProverkaTextboxa() < 1) 
+                    {
+                        // то вызвать метод сравнения чисел
+                        SravenieChisel();
+                        // и вызвать метод вывода результатов сравнения на экран
+                        RezultShow();
+                    }
+                else //иначе вывести сообщение пользователю
+                    MessageBox.Show("Вы ввели повторяющиеся цифры в числе");
             // очистка текстбокса
             textBox1.Text = "";
         }
@@ -112,7 +115,6 @@ namespace Corova
         
         private void button2_Click(object sender, EventArgs e)
         {
-            
             label3.Text = s; // передаем загаданное число
             label2.Text = "Было загадано: ";
             // запрещаем ввод символов в текстбокс
@@ -127,13 +129,32 @@ namespace Corova
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //Char.IsDigit(e.KeyChar) проверка, является ли нажатая клавиша цифрой. возвращает true или false
-            if (Char.IsDigit(e.KeyChar))
-                // если были нажаты цифры, то событие обработать в обычном режиме
+            //проверка, является ли нажатая клавиша цифрой или Backspace, возвращает true или false
+            if (Char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back)
+            // если были нажаты цифры, то событие обработать в обычном режиме           
                 e.Handled = false;
             else
                 //иначе, поставить метку что событие обработанно, но не пускать сигнал в текстбокс
                 e.Handled = true;
+        }
+
+        private int ProverkaTextboxa()
+        { 
+            char[] ch = textBox1.Text.ToCharArray();
+            int k = 0; //счетчик одинаковых чисел
+            // цикл проверки одинаковых символов в массиве
+            for (int i = 0; i < ch.Length - 1; i++)
+            {
+                for (int j = i + 1; j < ch.Length; j++)
+                {
+                    if (ch[i] == ch[j]) //если элемент массива I совпал с элементом массива J
+                    {
+                        k++; // то увеличиваем счетчик на 1
+                        break; //останавливаем цикл
+                    }
+                }
+            }
+            return k; // возвращаем количество одинаковых цифр             
         }
     }
 }
